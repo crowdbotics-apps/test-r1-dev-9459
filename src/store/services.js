@@ -1,4 +1,10 @@
 import axios from "axios"
+import { VVV1_USERNAME, VVV1_PASSWORD } from "react-native-dotenv"
+const vVV1 = axios.create({
+  baseURL: "https://www.google.com",
+  auth: { username: VVV1_USERNAME, password: VVV1_PASSWORD },
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const testR1API = axios.create({
   baseURL: "https://test-r1-dev-9459-prod.herokuapp.com/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
